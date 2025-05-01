@@ -1,0 +1,6 @@
+Feature: Delete an existing task
+
+  Scenario: User deletes a task
+    Given a task with the title "Old task" exists
+    When the user deletes the task
+    Then the task list should not contain "Old task"
