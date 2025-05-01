@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+
 import pytest
-from src.tasks import filter_tasks_by_category
+from tasks import filter_tasks_by_category
 
 @pytest.mark.parametrize("category,expected_count", [
     ("Work", 2),

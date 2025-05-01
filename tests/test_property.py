@@ -1,7 +1,11 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+
 from hypothesis import given
 import hypothesis.strategies as st
 import pytest
-from src.tasks import search_tasks
+from tasks import search_tasks
 
 @given(st.lists(st.dictionaries(keys=st.text(), values=st.text())))
 def test_search_function_stability(random_tasks):

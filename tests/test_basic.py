@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+
 import pytest
-from src.tasks import load_tasks, save_tasks, filter_tasks_by_priority, filter_tasks_by_category
+from tasks import load_tasks, save_tasks, filter_tasks_by_priority, filter_tasks_by_category
 
 def test_filter_by_priority():
     tasks = [{"id": 1, "priority": "High"}, {"id": 2, "priority": "Low"}]
